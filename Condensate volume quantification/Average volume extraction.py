@@ -15,7 +15,8 @@ def fix_typo_in_filenames(folder_path, typo='Smaple', correct='Sample'):
 def process_folder(folder_path, location_label):
     results = []
     for filename in os.listdir(folder_path):
-        if filename.endswith('.xls') and re.search(r'(sample|Sample)\d+_\d+_\d+_' + location_label, filename):
+        # if filename.endswith('.xls') and re.search(r'(sample|Sample)\d+_\d+_\d+_' + location_label, filename):
+        if filename.endswith('.xls'):
             file_path = os.path.join(folder_path, filename)
             try:
                 df = pd.read_excel(file_path, skiprows=1)
@@ -54,8 +55,16 @@ def process_folder(folder_path, location_label):
                 print(f"Error processing {filename}: {e}")
     return pd.DataFrame(results)
 
+# # Example usage:
+# base_dir = 'C:/Users/sjtu_/Box/2. Lab/Condensate Volume Quantification/Statistics/ABPP - statistics/'
+# inside_dir = os.path.join(base_dir, 'inside')
+# outside_dir = os.path.join(base_dir, 'outside')
+
+# fix_typo_in_filenames(inside_dir)
+# fix_typo_in_filenames(outside_dir)
+
 # Define your base directory
-base_dir = ''
+base_dir = 'C:/Users/sjtu_/Box/2. Lab/Condensate Volume Quantification/Statistics/JAMango - statistics/'
 
 # Process both inside and outside folders
 inside_df = process_folder(os.path.join(base_dir, 'inside'), 'inside')

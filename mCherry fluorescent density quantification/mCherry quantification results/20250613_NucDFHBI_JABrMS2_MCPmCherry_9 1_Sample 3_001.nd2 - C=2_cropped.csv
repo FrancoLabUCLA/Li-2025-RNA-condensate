@@ -1,0 +1,8 @@
+metric,value
+sum_nucleus,16442196.0
+voxels_nucleus,564452
+fluorescence_density_nucleus,29.129484880911043
+sum_cytoplasm,50756904.0
+voxels_cytoplasm,911134
+fluorescence_density_cytoplasm,55.70739759464579
+nucleus_ratio,0.24467881266266958
