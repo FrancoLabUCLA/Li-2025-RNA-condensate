@@ -1,6 +1,8 @@
 # Li-2025-Nat-Nano
 This repository contains code and source data for paper Li et al. Programmable artificial RNA condensates in mammalian cells
 
+Additional source data can be found on Zenodo at doi: 10.5281/zenodo.17823527.
+
 Raw data might contain different nomenclatures from the manuscript:
 J = 15nt (e.g. JABr = 15-A-Br)
 A = 20nt (e.g. AABr = 20-A-Br)
